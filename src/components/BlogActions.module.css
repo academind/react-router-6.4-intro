@@ -1,0 +1,19 @@
+.actions {
+  display: flex;
+  justify-content: center;
+  max-width: 30rem;
+  margin: 2rem auto;
+}
+
+.button {
+  font: inherit;
+  background-color: #e5e5e5;
+  color: #343232;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #f9d3a9;
+}

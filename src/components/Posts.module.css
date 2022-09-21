@@ -1,0 +1,26 @@
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 40rem;
+  margin: 2rem auto;
+}
+
+.posts h2 {
+  text-transform: capitalize;
+  font-size: 1.15rem;
+  font-weight: normal;
+}
+
+.posts a {
+  border-radius: 4px;
+  padding: 1rem;
+  background-color: #343232;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.posts a:hover {
+  background-color: #665a4d;
+}

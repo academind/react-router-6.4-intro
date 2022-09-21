@@ -1,0 +1,60 @@
+.form {
+  margin: 2rem auto;
+  max-width: 20rem;
+}
+
+.form fieldset {
+  border: none;
+  margin: 0.5rem 0;
+}
+
+.form input,
+.form label,
+.form textarea {
+  font: inherit;
+  display: block;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form button {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #e5e3e3;
+}
+
+.form button:hover {
+  background-color: #fcb66b;
+}
+
+.form button[type='button'] {
+  background-color: transparent;
+  color: #c7c4c4;
+}
+
+.form button[type='button']:hover {
+  color: #fcb66b;
+}
+
+.form button:disabled {
+  background-color: #a2a1a1;
+  color: #515151;
+}
+
+.form button[type='button']:disabled {
+  color: #515151;
+  background-color: transparent;
+}
