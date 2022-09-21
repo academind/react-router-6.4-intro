@@ -36,8 +36,5 @@ function BlogPostsPage() {
 export default BlogPostsPage;
 
 export async function loader({ request, params }) {
-  // await sleep(2000);
-  // return json([{ id: 'p1', title: 'First Post' }]); // same as return [] without json(...) (because useLoaderData() parses JSON automatically)
-  // return fetch('https://jsonplaceholder.typicode.com/posts');
   return getPosts();
 }
