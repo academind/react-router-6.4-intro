@@ -1,0 +1,33 @@
+.newsletter {
+  max-width: 20rem;
+  margin: 2rem auto;
+  padding-top: 1rem;
+  border-top: 2px solid #ccc;
+}
+
+.newsletter h2 {
+  font-size: 1.15rem;
+}
+
+.newsletter input,
+.newsletter button {
+  font: inherit;
+  line-height: 1.5rem;
+  border: 1px solid #fcb66b;
+}
+
+.newsletter input {
+  padding: 0.25rem;
+}
+
+.newsletter button {
+  background-color: #fcb66b;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #fda84c;
+}

@@ -10,8 +10,11 @@ import { savePost } from '../util/api';
 
 function NewPostPage() {
   const data = useActionData();
-  const navigate = useNavigate();
+
   const navigation = useNavigation();
+  console.log(navigation.state);
+
+  const navigate = useNavigate();
 
   function cancelHandler() {
     navigate('/blog');
@@ -19,7 +22,7 @@ function NewPostPage() {
 
   return (
     <>
-      {data && data.status && <p>{data.message}</p>}
+      {data && data.isError && <p>{data.message}</p>}
       <NewPostForm
         onCancel={cancelHandler}
         submitting={navigation.state === 'submitting'}
@@ -31,18 +34,11 @@ function NewPostPage() {
 export default NewPostPage;
 
 export async function action({ request }) {
-  const formData = await request.formData();
-  const post = {
-    title: formData.get('title'),
-    body: formData.get('post-text'),
-  };
-  try {
-    await savePost(post);
-  } catch (err) {
-    if (err.status === 422) {
-      return err;
-    }
-    throw err;
+  const data = await request.formData();
+
+  const validationError = await savePost(data);
+  if (validationError) {
+    return validationError;
   }
   return redirect('/blog');
 }
