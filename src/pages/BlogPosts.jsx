@@ -34,7 +34,3 @@ function BlogPostsPage() {
 }
 
 export default BlogPostsPage;
-
-export async function loader({ request, params }) {
-  return getPosts();
-}
